@@ -24,7 +24,10 @@ export namespace Components {
     */
     'middle': string;
   }
-  interface UsStockPrice {}
+  interface StockFinder {}
+  interface UsStockPrice {
+    'stockSymbol': string;
+  }
 }
 
 declare global {
@@ -36,6 +39,12 @@ declare global {
     new (): HTMLMyComponentElement;
   };
 
+  interface HTMLStockFinderElement extends Components.StockFinder, HTMLStencilElement {}
+  var HTMLStockFinderElement: {
+    prototype: HTMLStockFinderElement;
+    new (): HTMLStockFinderElement;
+  };
+
   interface HTMLUsStockPriceElement extends Components.UsStockPrice, HTMLStencilElement {}
   var HTMLUsStockPriceElement: {
     prototype: HTMLUsStockPriceElement;
@@ -43,6 +52,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'my-component': HTMLMyComponentElement;
+    'stock-finder': HTMLStockFinderElement;
     'us-stock-price': HTMLUsStockPriceElement;
   }
 }
@@ -62,10 +72,14 @@ declare namespace LocalJSX {
     */
     'middle'?: string;
   }
-  interface UsStockPrice {}
+  interface StockFinder {}
+  interface UsStockPrice {
+    'stockSymbol'?: string;
+  }
 
   interface IntrinsicElements {
     'my-component': MyComponent;
+    'stock-finder': StockFinder;
     'us-stock-price': UsStockPrice;
   }
 }
@@ -77,6 +91,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+      'stock-finder': LocalJSX.StockFinder & JSXBase.HTMLAttributes<HTMLStockFinderElement>;
       'us-stock-price': LocalJSX.UsStockPrice & JSXBase.HTMLAttributes<HTMLUsStockPriceElement>;
     }
   }
