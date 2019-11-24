@@ -21,7 +21,7 @@ form input {
   display: block;
   margin-bottom: 0.5rem;
   background-color: rgba(145, 145, 145, 0.31);
-  padding:.5rem .25rem;
+  padding: 0.5rem 0.25rem;
 }
 
 form input:focus,
@@ -31,7 +31,7 @@ form button:focus {
 
 form button {
   font: inherit;
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   border: 1px solid rosybrown;
   border-radius: 10px;
@@ -52,3 +52,7 @@ form button:disabled {
   color: #354c50;
   cursor: not-allowed;
 }
+
+/* :host(.error) {
+  background-color: tomato;
+} */

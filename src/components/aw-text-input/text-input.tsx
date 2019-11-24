@@ -14,12 +14,12 @@ export class AwTextInput {
 
   handleSubmit = (ev: Event) => {
     ev.preventDefault();
-    console.log(this.textInput.value);
+    // console.log(this.textInput.value);
   };
 
   public adds(num1: number, num2: number): number {
     let result = num1 + num2;
-    console.log(result);
+    // console.log(result);
     return result;
   }
 

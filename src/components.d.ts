@@ -5,116 +5,124 @@
  * It contains typing information for all components that exist in this project.
  */
 
-import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
+
 
 export namespace Components {
   interface AwTextInput {
-    name?: string;
+    'name'?: string;
   }
   interface MyComponent {
     /**
-     * The first name
-     */
-    first: string;
+    * The first name
+    */
+    'first': string;
     /**
-     * The last name
-     */
-    last: string;
+    * The last name
+    */
+    'last': string;
     /**
-     * The middle name
-     */
-    middle: string;
+    * The middle name
+    */
+    'middle': string;
   }
   interface StockFinder {}
+  interface UcSpinner {}
   interface UsStockPrice {
-    stockSymbol: string;
+    'stockSymbol': string;
   }
 }
 
 declare global {
-  interface HTMLAwTextInputElement
-    extends Components.AwTextInput,
-      HTMLStencilElement {}
+
+
+  interface HTMLAwTextInputElement extends Components.AwTextInput, HTMLStencilElement {}
   var HTMLAwTextInputElement: {
     prototype: HTMLAwTextInputElement;
     new (): HTMLAwTextInputElement;
   };
 
-  interface HTMLMyComponentElement
-    extends Components.MyComponent,
-      HTMLStencilElement {}
+  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
   var HTMLMyComponentElement: {
     prototype: HTMLMyComponentElement;
     new (): HTMLMyComponentElement;
   };
 
-  interface HTMLStockFinderElement
-    extends Components.StockFinder,
-      HTMLStencilElement {}
+  interface HTMLStockFinderElement extends Components.StockFinder, HTMLStencilElement {}
   var HTMLStockFinderElement: {
     prototype: HTMLStockFinderElement;
     new (): HTMLStockFinderElement;
   };
 
-  interface HTMLUsStockPriceElement
-    extends Components.UsStockPrice,
-      HTMLStencilElement {}
+  interface HTMLUcSpinnerElement extends Components.UcSpinner, HTMLStencilElement {}
+  var HTMLUcSpinnerElement: {
+    prototype: HTMLUcSpinnerElement;
+    new (): HTMLUcSpinnerElement;
+  };
+
+  interface HTMLUsStockPriceElement extends Components.UsStockPrice, HTMLStencilElement {}
   var HTMLUsStockPriceElement: {
     prototype: HTMLUsStockPriceElement;
     new (): HTMLUsStockPriceElement;
   };
   interface HTMLElementTagNameMap {
-    "aw-text-input": HTMLAwTextInputElement;
-    "my-component": HTMLMyComponentElement;
-    "stock-finder": HTMLStockFinderElement;
-    "us-stock-price": HTMLUsStockPriceElement;
+    'aw-text-input': HTMLAwTextInputElement;
+    'my-component': HTMLMyComponentElement;
+    'stock-finder': HTMLStockFinderElement;
+    'uc-spinner': HTMLUcSpinnerElement;
+    'us-stock-price': HTMLUsStockPriceElement;
   }
 }
 
 declare namespace LocalJSX {
   interface AwTextInput {
-    name?: string;
+    'name'?: string;
   }
   interface MyComponent {
     /**
-     * The first name
-     */
-    first?: string;
+    * The first name
+    */
+    'first'?: string;
     /**
-     * The last name
-     */
-    last?: string;
+    * The last name
+    */
+    'last'?: string;
     /**
-     * The middle name
-     */
-    middle?: string;
+    * The middle name
+    */
+    'middle'?: string;
   }
-  interface StockFinder {}
+  interface StockFinder {
+    'onUsSymbolSelected'?: (event: CustomEvent<any>) => void;
+  }
+  interface UcSpinner {}
   interface UsStockPrice {
-    stockSymbol?: string;
+    'stockSymbol'?: string;
   }
 
   interface IntrinsicElements {
-    "aw-text-input": AwTextInput;
-    "my-component": MyComponent;
-    "stock-finder": StockFinder;
-    "us-stock-price": UsStockPrice;
+    'aw-text-input': AwTextInput;
+    'my-component': MyComponent;
+    'stock-finder': StockFinder;
+    'uc-spinner': UcSpinner;
+    'us-stock-price': UsStockPrice;
   }
 }
 
 export { LocalJSX as JSX };
 
+
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
-      "aw-text-input": LocalJSX.AwTextInput &
-        JSXBase.HTMLAttributes<HTMLAwTextInputElement>;
-      "my-component": LocalJSX.MyComponent &
-        JSXBase.HTMLAttributes<HTMLMyComponentElement>;
-      "stock-finder": LocalJSX.StockFinder &
-        JSXBase.HTMLAttributes<HTMLStockFinderElement>;
-      "us-stock-price": LocalJSX.UsStockPrice &
-        JSXBase.HTMLAttributes<HTMLUsStockPriceElement>;
+      'aw-text-input': LocalJSX.AwTextInput & JSXBase.HTMLAttributes<HTMLAwTextInputElement>;
+      'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+      'stock-finder': LocalJSX.StockFinder & JSXBase.HTMLAttributes<HTMLStockFinderElement>;
+      'uc-spinner': LocalJSX.UcSpinner & JSXBase.HTMLAttributes<HTMLUcSpinnerElement>;
+      'us-stock-price': LocalJSX.UsStockPrice & JSXBase.HTMLAttributes<HTMLUsStockPriceElement>;
     }
   }
 }
+
+

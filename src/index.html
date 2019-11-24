@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Component Starter</title>
-
-  <script type="module" src="/build/us-stock-price-stencil.esm.js"></script>
-  <script nomodule src="/build/us-stock-price-stencil.js"></script>
-
-</head>
-<body>
-  <functions></functions>
-  <us-stock-price
-    stock-symbol="MSFT"
-  ></us-stock-price>
-<stock-finder></stock-finder>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Stencil Component Starter</title>
+    <script type="module" src="/build/us-stock-price-stencil.esm.js"></script>
+    <script nomodule src="/build/us-stock-price-stencil.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css" /> -->
+  </head>
+  <body>
+    <functions></functions>
+    <us-stock-price stock-symbol="MSFT"></us-stock-price>
+    <stock-finder></stock-finder>
+    <style>
+      html{--color-primary: #5e2e82;}
+    </style>
+  </body>
+  <!-- <script>
+const stock = document.querySelector('stock-finder');
+stock.addEventListener('usSymbolSelected', function (event){
+  console.log(event);
+})
+</script> -->
 </html>

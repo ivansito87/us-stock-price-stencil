@@ -10,18 +10,19 @@
   box-shadow: 0 4px 8px 0 #919191, 0 6px 20px 0 #919191;
 }
 
+
 form input {
   font: inherit;
-  border-top: 1px solid #5e2e82;
-  border-right: 1px solid #5e2e82;
-  border-left: 1px solid #5e2e82;
-  border-bottom: 2px solid #5e2e82;
+  border-top: 1px solid var(--color-primary, red);
+  border-right: 1px solid var(--color-primary, red);
+  border-left: 1px solid var(--color-primary, red);
+  border-bottom: 2px solid var(--color-primary, red);
   border-radius: 5px;
   text-decoration-color: dimgrey;
   display: block;
   margin-bottom: 0.5rem;
   background-color: rgba(145, 145, 145, 0.31);
-  padding:.5rem .25rem;
+  padding: 0.5rem 0.25rem;
 }
 
 form input:focus,
@@ -31,7 +32,7 @@ form button:focus {
 
 form button {
   font: inherit;
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   border: 1px solid rosybrown;
   border-radius: 10px;
@@ -43,7 +44,7 @@ form button {
 
 form button:hover,
 form button:hover {
-  background-color: #5e2e82;
+  background-color: var(--color-primary, red);
   border: 1px solid rosybrown;
 }
 
@@ -51,4 +52,22 @@ form button:disabled {
   background-color: #919191;
   color: #354c50;
   cursor: not-allowed;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0.3rem 0;
+  padding: 0.4rem;
+  border: 2px solid #919191;
+}
+
+li:hover,
+li:active {
+  background-color: var(--color-primary, red)4a;
+  cursor: pointer;
 }
