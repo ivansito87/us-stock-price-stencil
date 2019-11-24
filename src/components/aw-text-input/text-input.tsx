@@ -4,7 +4,7 @@ import { JSXElement } from "@babel/types";
 
 @Component({
   tag: "aw-text-input",
-  styleUrl: 'aw-text-input.css',
+  styleUrl: './aw-text-input.css',
   shadow: true
 })
 export class AwTextInput {
