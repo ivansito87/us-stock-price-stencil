@@ -17,15 +17,21 @@
   "scripts": {
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
-    "test": "stencil test --spec --e2e",
+    "test": "jest",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate"
   },
   "devDependencies": {
-    "@stencil/core": "^1.3.3"
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@stencil/core": "^1.3.3",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
   },
   "license": "MIT",
   "dependencies": {
-    "jest": "^24.9.0"
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.11",
+    "ts-jest": "^24.1.0"
   }
 }
