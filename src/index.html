@@ -7,6 +7,18 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
     />
     <title>Stencil Component Starter</title>
+    <!-- Add support for Web Components to older browsers. -->
+    <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <!-- Your application must load the Roboto and Material Icons fonts. -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons&display=block"
+      rel="stylesheet"
+    />
     <script type="module" src="/build/us-stock-price-stencil.esm.js"></script>
     <script nomodule src="/build/us-stock-price-stencil.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="styles.css" /> -->
@@ -15,14 +27,33 @@
     <functions></functions>
     <us-stock-price stock-symbol="MSFT"></us-stock-price>
     <stock-finder></stock-finder>
+    <mwc-button id="myButton" label="Click Me!" raised></mwc-button>
     <style>
-      html{--color-primary: #5e2e82;}
+      html {
+        --color-primary: #5e2e82;
+      }
     </style>
   </body>
-  <!-- <script>
-const stock = document.querySelector('stock-finder');
-stock.addEventListener('usSymbolSelected', function (event){
-  console.log(event);
-})
-</script> -->
+  <script>
+  const stock = document.querySelector('stock-finder');
+  stock.addEventListener('usSymbolSelected', function (event){
+    console.log(event);
+  })
+  </script>
+  <script type="module">
+    
+    // Importing this module registers <mwc-button> as an element that you
+      // can use in this page.
+      //
+      // Note this import is a bare module specifier, so it must be converted
+      // to a path using a server such as es-dev-server.
+      import '@material/mwc-button';
+      
+      // Standard DOM APIs work with Web Components just like they do for
+      // built-in elements.
+      const button = document.querySelector('#myButton');
+      button.addEventListener('click', () => {
+        alert('You clicked!');
+      });
+      </script>
 </html>

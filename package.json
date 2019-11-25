@@ -30,8 +30,10 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@material/mwc-button": "^0.10.0",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.11",
+    "@webcomponents/webcomponentsjs": "^2.4.0",
     "eslint-config-prettier": "^6.7.0",
     "ts-jest": "^24.1.0"
   }

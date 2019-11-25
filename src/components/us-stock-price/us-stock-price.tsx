@@ -85,7 +85,9 @@ export class UsStockPrice {
     // console.log("componentDidUnload");
   }
 
-  @Listen("body:usSymbolSelected")
+  @Listen("usSymbolSelected", {
+    target: "body"
+  })
   onStockSymbolSelectFromUsStockSymbol(event: CustomEvent) {
     if (event.detail && event.detail !== this.stockSymbol) {
       console.log("Received the custom todoCompleted event: ", event.detail);
